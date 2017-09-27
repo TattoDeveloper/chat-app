@@ -3,8 +3,10 @@ const path   = require('path')
 const public = path.join(__dirname, '../public')
 const express= require('express')
 
+let port = process.env.PORT || 3000
+
 let app = express()
 //path a la carpeta publica de estaticos
 app.use(express.static(public))
 
-app.listen(3000, ()=> console.log("running"))
+app.listen(port, ()=> console.log("runnin" + port))
